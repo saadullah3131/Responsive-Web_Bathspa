@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> University Website Design </title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fbc99d77e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+    <link rel=icon href="Images/cropped-BSU-LOGO.jpg" sizes="20x20" type="image/png">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav id="myNav">
+            <a href="home.html"><img src="Images/cropped-BSU-LOGO.jpg" /></a>
+            <i id="menu-icon" class="fas fa-bars" onclick="toggleMenu()"></i>
+            <div class="nav-links">
+                <ul>
+                    <i id="menu-icon" class="fas fa-bars" onclick="toggleMenu()"></i>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>CONTACT US</h1>
+    </section>
+
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d586481.0975902746!2d55.38209362528602!3d25.536113355591166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef67451f56ae4d7%3A0x9338a5c333829d48!2sBath%20Spa%20University!5e0!3m2!1sen!2sae!4v1653160548164!5m2!1sen!2sae"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    </section>
+
+    <section class="contact-us">
+        <div class="contact-col">
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>Contact Us</h5>
+                    <p>+971 55 7571895</p>
+
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-at"></i>
+                <span>
+                    <h5>Email</h5>
+                    <p>admin@bathspa.com</p>
+
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-home"></i>
+                <span>
+                    <h5>Address</h5>
+                    <p>RAK, UAE</p>
+
+                </span>
+            </div>
+        </div>
+        <div class="contact-col">
+            <form class="comment-form">
+                <input type="text" placeholder="Enter Name" />
+                <input type="email" placeholder="Enter Email" />
+                <input type="number" placeholder="Enter Your Mobile Number" />
+                <textarea rows="5" placeholder="Additional Comment">
+                        </textarea>
+                <button type="submit" class="hero-btn red-btn">
+                    REQUEST CALL
+                </button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!--footer-->
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Bath Spa University is where creative minds meet. We teach and research across art, sciences, education,
+            social science, and business. The University employs outstanding creative professionals who support its aim
+            to be a leading educational institution in creativity, culture and enterprise.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p><i class="fa-solid fa-copyright"></i>All Copyrights Reserved By BATH SPA UNIVERSITY</p>
+
+    </section>
+
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("myNav");
+            menu.classList.toggle("show");
+            navLinks.classList.toggle('active');
+        }
+
+        const navItems = document.querySelectorAll('.nav-links ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

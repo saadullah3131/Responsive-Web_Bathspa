@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> University Website Design </title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fbc99d77e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+    <link rel=icon href="Images/cropped-BSU-LOGO.jpg" sizes="20x20" type="image/png">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav id="myNav">
+            <a href="home.html"><img src="Images/cropped-BSU-LOGO.jpg" /></a>
+            <i id="menu-icon" class="fas fa-bars" onclick="toggleMenu()"></i>
+            <div class="nav-links">
+                <ul>
+                    <i id="menu-icon" class="fas fa-bars" onclick="toggleMenu()"></i>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>OUR COURSES</h1>
+
+    </section>
+
+    <!-------course-------->
+
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>We Offer Different Types Of Courses</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>BSc Creative Computing</h3>
+                <p>This course celebrates digital creativity. We teach you broad computing and design skills, from
+                    smartphone app building to VR game development and beyond.You learn your craft from the ground up,
+                    through a mix of workshops, tech demos, creative problem solving challenges and collaborative
+                    briefs. </p>
+            </div>
+            <div class="course-col">
+                <h3>BA (HONS)</h3>
+                <p>Budding entrepreneur? CEO of the future? Marketing Director in the making? Whatever your aspirations,
+                    our Business and Management course will give you a thorough grounding in the theory and practice of
+                    modern business.</p>
+            </div>
+            <div class="course-col">
+                <h3>Physcology</h3>
+                <p>A trip through all of the fundamental psychological concepts and principles is what psychology is all
+                    about. The knowledge acquired from this course allows students to critically assess psychological
+                    research and to understand human thinking and conduct in greater depth.</p>
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!--facelities-->
+
+    <section class="facelities">
+        <h1>Our Facelities</h1>
+        <p>We Also Provide World Class Facelities For Our Students.</p>
+        <div class="row">
+            <div class="facelities-col">
+                <img src="Images/library.png" />
+                <h3>World Class Library</h3>
+                <p>The libraries at Bath Spa are more like Integrated Knowledge Resource Centres that are stocked with
+                    over 2 lac books in total; periodicals, references, national and international journals, covering
+                    all aspects of academic studies and research materials.</p>
+            </div>
+            <div class="facelities-col">
+                <img src="Images/basketball.png" />
+                <h3>Large Play Ground</h3>
+                <p>
+                    A Winner's Playground to Nurture Champions<br /> At Bath Spa, sports form one of the important
+                    aspects of a student's development.<br /> From increasing concentration levels and working as a team
+                    to inculcating a winning spirit; sports help students build a strong character and a well rounded
+                    personality
+                </p>
+            </div>
+            <div class="facelities-col">
+                <img src="Images/cafeteria.png" />
+                <h3>Tasty And Healthy Food</h3>
+                <p>All the food outlets are situated in one area, with a beautiful view of the sports ground and outdoor
+                    spaces. The dining areas provide a relaxed environment to enjoy a quick coffee or your favorite meal
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!--footer-->
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Bath Spa University is where creative minds meet. We teach and research across art, sciences, education,
+            social science, and business. The University employs outstanding creative professionals who support its aim
+            to be a leading educational institution in creativity, culture and enterprise.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p><i class="fa-solid fa-copyright"></i>All Copyrights Reserved By BATH SPA UNIVERSITY</p>
+
+    </section>
+
+
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("myNav");
+            menu.classList.toggle("show");
+            navLinks.classList.toggle('active');
+        }
+
+        const navItems = document.querySelectorAll('.nav-links ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

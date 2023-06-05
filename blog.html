@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> University Website Design </title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,100;1,600&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fbc99d77e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
+    <link rel=icon href="Images/cropped-BSU-LOGO.jpg" sizes="20x20" type="image/png">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav id="myNav">
+            <a href="home.html"><img src="Images/cropped-BSU-LOGO.jpg" /></a>
+            <i id="menu-icon" class="fas fa-bars" onclick="toggleMenu()"></i>
+            <div class="nav-links">
+                <ul>
+                    <i id="menu-icon" class="fas fa-bars" onclick="toggleMenu()"></i>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSES</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>BLOG</h1>
+
+    </section>
+
+    <!--blog page content-->
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="Images/8.jpg" />
+                <h2>Iftikhar A Khan | Program Leader, Creative Computing</h2>
+                <br />
+                <p>It is as interesting as it is deceptive, how certain professions are hard-termed “technical”; as if
+                    they are purely mechanical/manual, with no requisite to use one’s brain & creativity; almost
+                    equaling it to “breaking stones”. But think of his breaking stones scenario for a moment. Do you
+                    think one can break stones efficiently for a long time without using brain...or for that matter,
+                    being creative? In fact you will quickly realize; once you imagine yourself given a task to break
+                    100 stones into smaller pieces over a day (manually or mechanically); that it is not enough to have
+                    just adequate energy and good tools to do the job most efficiently. You will see that it will take
+                    substantial engagement, understanding the problem at hand, considering several approaches,
+                    implementing an approach, testing the result & continued iteration, until the problem is solved most
+                    proficiently, consistently. In this case, breaking all 100 stones in into required size pieces, most
+                    efficiently with a sense of system that can be repeated endlessly.</p>
+                <br />
+                <p>
+                    You may find this interesting to see how the above “thinking pattern”; which is typically earmarked
+                    for the elite “design thinking & creative” tasks; applies to even the most mundane (not so of
+                    course) of the jobs.
+
+                    <br /><br />Coding is one of these tasks; where we typically visualize a coder typing vehemently on
+                    a computer; reducing coding to a skill of the hands…with hardly or no engagement of the mind!!
+                    Whereas it can’t be any further from the truth as we can see with the example above.
+
+                    <br /> <br /> Coding starts exactly where every small & big inventions of the world come from…the
+                    human mind. It is a mental skill that is manifested with manual & digital tools. In fact a major
+                    part of coding is mental that requires “adequate engagement, understanding the problem at hand,
+                    considering several approaches, implementing an approach, testing the result; & continued iteration
+                    until the problem is solved most efficiently & consistently.”
+                </p>
+
+                <div class="comment-box">
+                    <h3>Leave A Comment</h3>
+
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Name" />
+                        <input type="email" placeholder="Enter Email" />
+                        <textarea rows="5" placeholder="Your Comment">
+                        </textarea>
+                        <button type="submit" class="hero-btn red-btn">
+                            POST COMMENT
+                        </button>
+                    </form>
+                </div>
+
+
+
+
+
+            </div>
+            <div class="blog-right">
+
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Business Analytics</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>Cyber Security</span>
+                    <span>12</span>
+                </div>
+                <div>
+                    <span>Machine Learning</span>
+                    <span>22</span>
+                </div>
+                <div>
+                    <span>Business Accounts</span>
+                    <span>14</span>
+                </div>
+                <div>
+                    <span>Game Development</span>
+                    <span>34</span>
+                </div>
+                <div>
+                    <span>Web Development</span>
+                    <span>24</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <!--footer-->
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Bath Spa University is where creative minds meet. We teach and research across art, sciences, education,
+            social science, and business. The University employs outstanding creative professionals who support its aim
+            to be a leading educational institution in creativity, culture and enterprise.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p><i class="fa-solid fa-copyright"></i>All Copyrights Reserved By BATH SPA UNIVERSITY</p>
+
+    </section>
+
+
+
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("myNav");
+            menu.classList.toggle("show");
+            navLinks.classList.toggle('active');
+        }
+
+        const navItems = document.querySelectorAll('.nav-links ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>
